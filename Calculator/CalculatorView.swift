@@ -94,6 +94,8 @@ struct CalculatorButtonRow: View {
                         .foregroundColor(.white)
                         .font(.system(size: 28))
                         .background(button.color)
+                        .foregroundColor(button.title == self.pressedOperator ? .orange : .white)
+                        .background(button.title == self.pressedOperator ? .white : button.color)
                         .cornerRadius(100)
                 })
             }
